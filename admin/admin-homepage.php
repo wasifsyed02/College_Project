@@ -16,7 +16,7 @@
         }
         else
         header("location:/signUp.html");
-        
+
 
     }
     else
@@ -33,7 +33,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage of netdot.</title>
+    <title>Admission Details of <?php echo $row_user['fname']; ?>.</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/custom.css" class="rel">
     <!-- Font Icon -->
@@ -69,21 +69,21 @@
                             <h1 class="text-primary text-center logo" ><strong>MGDC</strong> </h1>
                             <h3 class=" text-primary text-center"> MODEL GOVT DEGREE COLLEGE </h3>
                             <h5 class="text-danger text-center"> CHARAR-I-SHARIEF KASHMIR 191112</h5>
-                            <h5 class="text-center">Email:ndiit.chsh@gmail.com|ph:0951-253297|ph:+919906693418|</h5>
+                            <h5 class="text-center">Email: info@mgdc-chararisharief.com|ph: 01951-2530278|</h5>
                         </div>
-                   
+
                 </div>
-                
+
 
                 <div class="row mt-4 px-3">
                     <div class="col-md-9">
                     <h6 class="text-danger text-left py-3">Addmission No: <?php echo test_input($row_user['id']); ?></h6>
                         <h5 class="text-left gradient px-2 py-1 ">I. COURSE TO WHICH ADDMISSION IS SOUGHT:</h5>
 
-                        <h5 class="text-left "> Course Name:   <?php echo test_input(strtoupper($row_user_details['course'])); ?>  </h5> 
-                        
-                        <h5 class="text-left px-2 py-1 gradient">II. NAME OF THE CANIDATE: </h5> 
-                        <h5 class="text-left "> <strong> Student Name:  </strong>  <?php echo test_input(strtoupper($row_user['fname'])); ?>  </h5> 
+                        <h5 class="text-left "> Course Name:   <?php echo test_input(strtoupper($row_user_details['course'])); ?>  </h5>
+
+                        <h5 class="text-left px-2 py-1 gradient">II. NAME OF THE CANIDATE: </h5>
+                        <h5 class="text-left "> <strong> Student Name:  </strong>  <?php echo test_input(strtoupper($row_user['fname'])); ?>  </h5>
                     </div>
                     <div class="col-md-3">
                         <?php echo '<img src="data:image;base64,'.base64_encode($row_user_details['form_photo']).'" style="width:200px; height:200px; border:2px solid black;" >'; ?>
@@ -91,34 +91,30 @@
                 </div>
                 <div class="row mt-4 px-3">
                     <div class="col-md-12">
-                    <h5 class="text-left gradient px-2 py-1">  III. Parentage:   <b class="text-primary">    </b></h5> 
-                    <h5 class="text-left "> <strong> Father Name:  </strong>  <?php echo test_input(strtoupper($row_user_details['fathersname'])); ?>  </h5> 
-                    <h5 class="text-left "> <strong> Mother Name:  </strong>  <?php echo test_input(strtoupper($row_user_details['mothername'])); ?>  </h5> 
+                    <h5 class="text-left gradient px-2 py-1">  III. Parentage:   <b class="text-primary">    </b></h5>
+                    <h5 class="text-left "> <strong> Father Name:  </strong>  <?php echo test_input(strtoupper($row_user_details['fathersname'])); ?>  </h5>
+                    <h5 class="text-left "> <strong> Mother Name:  </strong>  <?php echo test_input(strtoupper($row_user_details['mothername'])); ?>  </h5>
                 </div> </div>
                 <div class="row mt-4 px-3">
                     <div class="col-md-12">
-                    <h5 class="text-left gradient px-2 py-1"> IV. Permanent Address:  <b class="text-primary">    </b></h5> 
-                    <h5 class="text-left "> <strong> (street,village,distric):  </strong>  <?php echo test_input(strtoupper($row_user_details['Perminent_Address'])); ?>  </h5> 
+                    <h5 class="text-left gradient px-2 py-1"> IV. Permanent Address:  <b class="text-primary">    </b></h5>
+                    <h5 class="text-left "> <strong> (street,village,distric):  </strong>  <?php echo test_input(strtoupper($row_user_details['Perminent_Address'])); ?>  </h5>
                     <h5 class="text-left "> <strong> Pincode:  </strong>  <?php echo test_input(strtoupper($row_user_details['pincode'])); ?>  </h5>
-                    <h5 class="text-left "> <strong> Phone Number:  </strong>  <?php echo test_input(strtoupper($row_user_details['phonenumber'])); ?>  </h5> 
-                    <h5 class="text-left "> <strong> Email:  </strong>  <?php echo test_input(strtoupper($row_user['email'])); ?>  </h5> 
+                    <h5 class="text-left "> <strong> Phone Number:  </strong>  <?php echo test_input(strtoupper($row_user_details['phonenumber'])); ?>  </h5>
+                    <h5 class="text-left "> <strong> Email:  </strong>  <?php echo test_input(strtoupper($row_user['email'])); ?>  </h5>
                 </div> </div>
 
                 <div class="row mt-4 px-3">
                     <div class="col-md-12">
-                    <h5 class="text-left gradient px-2 py-1">  V. DATE OF BIRTH: <b class="text-primary">    </b></h5> 
-                    <h5 class="text-left "> <strong> Dob:  </strong>  <?php echo test_input(strtoupper($row_user_details['dob'])); ?>  </h5> 
-                    
+                    <h5 class="text-left gradient px-2 py-1">  V. DATE OF BIRTH: <b class="text-primary">    </b></h5>
+                    <h5 class="text-left "> <strong> Dob:  </strong>  <?php echo test_input(strtoupper($row_user_details['dob'])); ?>  </h5>
+
                 </div> </div>
+                
+
                 <div class="row mt-4 px-3">
                     <div class="col-md-12">
-                    <h5 class="text-left gradient px-2 py-1">  VI. Occupation:   <b class="text-primary">    </b></h5> 
-                    <h5 class="text-left "> <strong> Occupation:  </strong>  <?php echo test_input(strtoupper($row_user_details['occupation'])); ?>  </h5> 
-                    
-                </div> </div>
-                <div class="row mt-4 px-3">
-                    <div class="col-md-12">
-                    <h5 class="text-left gradient px-2 py-1">  VII. ACADAMIC QUALIFICATION :   <b class="text-primary">    </b></h5> 
+                    <h5 class="text-left gradient px-2 py-1">  VII. ACADAMIC QUALIFICATION :   <b class="text-primary">    </b></h5>
                     <table class="table table-bordered table-striped  table-responsive-lg ">
                         <thead class="thead-white">
                             <tr>
@@ -130,7 +126,7 @@
                                 <th>PERCENTAGE</th>
                             </tr>
                             <tbody>
-                            <?php 
+                            <?php
                             $i=1;
                             while($row_user_ac=$result->fetch_assoc())
                             {
@@ -140,19 +136,19 @@
                             </tbody>
                         </thead>
                     </table>
-                    
+
                 </div> </div>
                 <div class="row mt-3">
-                   
+
                     <div class="col-md-3 offset-md-5">
                         <button class="btn btn-success px-4 d-print-none" onclick="window.print();return false;">Print</button>
                         <button class="btn btn-primary px-4  d-print-none">Edit</button>
                     </div>   </div>
-                    
-                   
+
+
                     <div class="row d-none d-print-block">
                         <div class="col-md-12">
-                        <h5 class="text-left text-black  px-2 py-1">  VIII. :Other information   <b class="text-primary">    </b></h5> 
+                        <h5 class="text-left text-black  px-2 py-1">  VIII. :Other information   <b class="text-primary">    </b></h5>
                         </div>
                     </div>
 

@@ -13,7 +13,7 @@ session_start();
     $pincode=$_POST["pin"];
     $phonenumber=$_POST["Phonenumber"];
     $dob=$_POST["dob"];
-    $occupation=$_POST["Occupation"];
+    // $occupation=$_POST["Occupation"];
     $form_photo =  file_get_contents($_FILES['form_photo']['tmp_name']);
     $count=$_POST["count"];
     for($i=0;$i<=$count;$i++)
@@ -39,10 +39,10 @@ function inertfillup($userid, $course, $fatherName,$MotherName, $paddress,$pinco
     $fatherName=mysqli_real_escape_string($conn,test_input($fatherName)); $MotherName=mysqli_real_escape_string($conn,test_input($MotherName));
     $paddress=mysqli_real_escape_string($conn,test_input($paddress)); $pincode=mysqli_real_escape_string($conn,($pincode));
     $phonenumber=mysqli_real_escape_string($conn,test_input($phonenumber)); $dob=mysqli_real_escape_string($conn,$dob);
-    $occupation=mysqli_real_escape_string($conn,test_input($occupation));
+    // $occupation=mysqli_real_escape_string($conn,test_input($occupation));
     //inerting data into table
-    $statement=$conn->prepare("insert into user_details(user_id,course,fathersname,mothername,pincode,Perminent_Address,phonenumber,dob,occupation,form_photo) values(?,?,?,?,?,?,?,?,?,?)");
-    $statement->bind_param("isssssssss",$userid, $course, $fatherName,$MotherName,$pincode,$paddress,$phonenumber,$dob, $occupation, $form_photo);
+    $statement=$conn->prepare("insert into user_details(user_id,course,fathersname,mothername,pincode,Perminent_Address,phonenumber,dob,form_photo) values(?,?,?,?,?,?,?,?,?)");
+    $statement->bind_param("isssssssss",$userid, $course, $fatherName,$MotherName,$pincode,$paddress,$phonenumber,$dob, $form_photo);
     if($statement->execute())
     return true;
     else 

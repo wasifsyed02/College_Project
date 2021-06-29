@@ -97,7 +97,7 @@ if(check_column("verify_det","users","email",$_SESSION['email'],1))
                    
                     </div>
 
-                    <label for="dob" class="pl-3"><strong>Occupation(Tick the appropirate box)</strong></label>
+                    <!-- <label for="dob" class="pl-3"><strong>Occupation(Tick the appropirate box)</strong></label>
                     <div class="row px-3 pb-3">
                         <div class="col-md-2">
                         <input type="radio" name="Occupation" id="govtemployee" value="govtemployee" required> Govt Employee
@@ -117,7 +117,7 @@ if(check_column("verify_det","users","email",$_SESSION['email'],1))
                                     <div class="col-md-2">
                                         <input type="radio" name="Occupation" id="housewife" value="other" required> other
                                         </div>
-                    </div>
+                    </div> -->
                     <label for="qualification" class="pl-3"><strong> Acadamic Qualification</strong></label>
                     <div class="row px-3 pb-3">
                         <div class="col-md-12">
