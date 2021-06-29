@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2020 at 10:28 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: Jun 29, 2021 at 08:16 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `netdot_registration`
+-- Database: `mgdc`
 --
 
 -- --------------------------------------------------------
@@ -47,8 +47,7 @@ INSERT INTO `acadamic_qualification` (`id`, `user_id`, `Examination_Passed`, `Ye
 (11, 21, '1', '1', '1', '1', '1'),
 (12, 21, '2', '2', '2', '2', '2'),
 (13, 21, '3', '3', '3', '3', '3'),
-(14, 21, '4', '4', '4', '4', '4'),
-(15, 22, 'sdf', 'sadf', 'asdf', 'asdf', 'asfd');
+(14, 21, '4', '4', '4', '4', '4');
 
 -- --------------------------------------------------------
 
@@ -75,9 +74,10 @@ INSERT INTO `users` (`id`, `fname`, `email`, `PASSWORD`, `verify`, `verify_det`,
 (1, 'syed wasif', 'wasifsyed02@gmail.com', 'simnani123', 1, 1, 'student', '234022'),
 (17, 'wasif simnani', 'wasifsyed02@hotmail.com', 'simnani123', 1, 1, 'student', '150025'),
 (18, 'Mavin Mir', 'Mirmavin26@gmail.com', 'mavin123', 1, 1, 'student', '899084'),
-(19, 'ndiit', 'ndiit.chsh@gmail.com', 'admin', 1, 1, 'admin', ''),
+(19, 'ndiit', 'admin@admin.com', 'admin', 1, 1, 'admin', ''),
 (21, 'Irshad Ahmad', 'irshadjunior@gmail.com', 'irshad', 1, 1, 'student', '880935'),
-(22, 'wasif', 'wasif@gmail.com', 'simnani123', 1, 1, 'student', '839885');
+(22, 'wasif', 'wasif@gmail.com', 'simnani123', 1, 1, 'student', '839885'),
+(35, 'syed  wasif  simnani', 'syedmudasirsimanni@gmail.com', '1234', 1, 0, 'student', '540318');
 
 -- --------------------------------------------------------
 
@@ -147,19 +147,19 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for table `acadamic_qualification`
 --
 ALTER TABLE `acadamic_qualification`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
